@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, Keyboard } from 'react-native';
 import { connect } from 'react-redux';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
 
@@ -15,6 +15,8 @@ class LoginForm extends Component {
     }
 
     onButtonPress() { 
+        Keyboard.dismiss();
+        
         const { email, password } = this.props;
 
         this.props.loginUser({ email, password });
@@ -38,7 +40,7 @@ class LoginForm extends Component {
         <CardSection>
             <Input 
                 label='Email'
-                placeholder='user@gamil.com'
+                placeholder='user@gmail.com'
                 onChangeText={this.onEmailChange.bind(this)}
                 value={this.props.email}
             />
