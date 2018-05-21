@@ -6,8 +6,7 @@ const initialState = {
     shift: 'Monday'
 };
 
-export default (state = initialState, action) => {
-  console.log(action);
+export default (state = initialState, action) => { 
   switch (action.type) {
 
   case EMPLOYEE_UPDATE: 

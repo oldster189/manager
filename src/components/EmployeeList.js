@@ -24,7 +24,7 @@ class EmployeeList extends Component {
   }
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <View>
         <Text>Employee List</Text>
@@ -40,6 +40,7 @@ class EmployeeList extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(`employees: ${JSON.stringify(state.employees)}`);
   const employees = _.map(state.employees, (val, uid) => {
       return { ...val, uid };
   });
