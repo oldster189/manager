@@ -19,7 +19,7 @@ class EmployeeEdit extends Component {
     componentWillMount() { 
         console.log(this.props.employee);
         /*
-        วนลูป ดึงค่าจาก employee ที่ละตัวไปให้ action_create employee_update
+        วนลูป ดึงค่าจาก key value in collection employee ที่ละตัวไปให้ action_create employee_update
         Example: 
             employee: {
                 name: "aot", 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { Provider } from 'react-redux'; 
+import { Provider } from 'react-redux';  
 import firebase from 'firebase';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
@@ -17,7 +17,7 @@ export default class App extends Component {
             storageBucket: 'manager-25f7a.appspot.com',
             messagingSenderId: '608910111548'
         };
-        firebase.initializeApp(config);
+        firebase.initializeApp(config); 
     }
 
   render() {
